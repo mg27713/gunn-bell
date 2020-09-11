@@ -1,4 +1,4 @@
-const schedules = require("./schedules.json");
+// const schedules = require("./schedules.json");
 
 function secondLoop() {
 	let date = new Date().toString().split(" ");
