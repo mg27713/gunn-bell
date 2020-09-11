@@ -9,6 +9,9 @@
 		Bell should ring! If it doesn't, click this button to ensure it isn't a site permission error.
 		<button>Button</button> <!-- Firefox requires interaction before playing sound, interaction comes from this button -->
 		
-		<audio id="bell-sound" src="bell.mp3" type="audio/mpeg"></audio>
+		<audio controls>
+  			<source src="bell.mp3" type="audio/mpeg">
+  			Your browser does not support the audio element.
+		</audio>
 	</body>
 </html>
