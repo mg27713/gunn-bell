@@ -8,12 +8,13 @@
 	</head>
 	
 	<body>
-		Bell should ring! If it doesn't, click this button to ensure it isn't a site permission error.
-		<button>Button</button> <!-- Firefox requires interaction before playing sound, interaction comes from this button -->
+		<img src="bell.png">
 		
-		<audio controls>
-  			<source src="bell.mp3" type="audio/mpeg">
-  			Your browser does not support the audio element.
-		</audio>
+		<div>
+			Bell should ring! If it doesn't, click this button to ensure it isn't a site permission error.
+			<button>Button</button> <!-- Firefox requires interaction before playing sound, interaction comes from this button -->
+			
+			<audio id="bell-sound" src="bell.mp3"></audio>
+		</div>
 	</body>
 </html>
