@@ -7,6 +7,7 @@
 		
 		<script type="text/javascript" src="schedule.js"></script>
 		<script type="text/javascript" src="bell.js"></script>
+		<script type="text/javascript" src="options.js"></script>
 	</head>
 	
 	<body>
@@ -17,6 +18,10 @@
 			<button>Button</button> <!-- Firefox requires interaction before playing sound, interaction comes from this button -->
 			
 			<audio id="bell-sound" src="bell.mp3"></audio>
+		</div>
+		
+		<div>
+			Volume: <input type="range" id="volume-slider"> <span id="volume-display"></span>%
 		</div>
 	</body>
 </html>
