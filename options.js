@@ -15,5 +15,6 @@ window.addEventListener("load", function() {
 		
 		audio.volume = parseInt(volume.value)/100;
 		volumeField.innerHTML = volume.value;
+		localStorage.settingVolume = volume.value;
 	});
 });
