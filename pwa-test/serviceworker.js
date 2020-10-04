@@ -17,7 +17,7 @@ addEventListener("install", function(event) {
 			.open(cachePrefix + version)
 			.then(function(cache) {
 				return cache.addAll(filesToCache);
-			});
+			})
 	);
 });
 
@@ -36,6 +36,6 @@ addEventListener("fetch", function(event) {
 									return response;
 								});
 						});
-			});
+			})
 	);
 });
