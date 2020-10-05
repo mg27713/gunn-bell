@@ -26,7 +26,7 @@ addEventListener("fetch", function(event) {
 		caches
 			.match(event.request)
 			.then(function(res) {
-				return r // short circuiting exists in JS.
+				return res // short circuiting exists in JS.
 					|| fetch(event.request)
 						.then(function(response) {
 							return caches
