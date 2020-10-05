@@ -1,11 +1,11 @@
 const filesToCache = [
-	"/index.html",
-	"/bell.js",
-	"/schedule.js",
-	"/options.js",
-	"/bell.mp3",
-	"/bell.png",
-	"/privacy/index.html"
+	"index.html",
+	"bell.js",
+	"schedule.js",
+	"options.js",
+	"bell.mp3",
+	"bell.png"
+//	"/privacy/index.html"
 ]; // don't cache serviceworker or updater, these are important to allow updates to exist!
 
 const cachePrefix = "BELL_WEB_APP_"
