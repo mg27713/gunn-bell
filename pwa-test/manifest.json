@@ -4,8 +4,8 @@
   "start_url": ".",
   "icons": [
     {
-      "src": "bell.png",
-      "sizes": "128x128",
+      "src": "bell-144.png",
+      "sizes": "144x144",
       "type": "image/png"
     }
   ],
