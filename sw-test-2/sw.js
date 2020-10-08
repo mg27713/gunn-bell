@@ -66,13 +66,14 @@ addEventListener("fetch", function(event) {
 					}
 					
 					let content = await promise;
+					let newResponse = buildNewResponse(content);
 
 					return content.includes(DONT_CACHE_ME)
-					? buildNewResponse(content)
+					? newResponse
 					: caches
 						.open(cachePrefix + version)
 						.then(function(cache) {
-							cache.put(event.request, response.clone());
+							cache.put(event.request, newResponse);
 							return response;
 						});
 				});
