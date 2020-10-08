@@ -9,8 +9,8 @@
 ////"/privacy/index.html"
 //]; // don't cache serviceworker or updater, these are important to allow updates to exist!
 
-const cachePrefix = "BELL_WEB_APP_"
-	const version = 1;
+const cachePrefix = "BELL_WEB_APP_";
+const version = 2;
 
 const doCache = ["index.html"];
 //don't cache versions.js
