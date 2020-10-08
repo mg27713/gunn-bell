@@ -65,7 +65,7 @@ addEventListener("fetch", function(event) {
 						readMore();
 					}
 					
-					await promise;
+					let content = await promise;
 
 					return content.includes(DONT_CACHE_ME)
 					? buildNewResponse(content)
