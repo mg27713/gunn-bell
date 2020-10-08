@@ -35,7 +35,7 @@ addEventListener("fetch", function(event) {
 			.then(function(res) {
 				return res
 				|| fetch(event.request)
-				.then(function(response) {
+				.then(async function(response) {
 					const reader = response.body.getReader();
 					
 					var resolve;
@@ -65,7 +65,7 @@ addEventListener("fetch", function(event) {
 						readMore();
 					}
 					
-					let content = awaitPromise(promise);
+					await promise;
 
 					return content.includes(DONT_CACHE_ME)
 					? buildNewResponse(content)
@@ -88,8 +88,4 @@ function buildNewResponse(content) {
 	});
 	
 	return new Response(stream, {"Content-Type":"text/javascript"});
-}
-
-async function awaitPromise(promise) {
-	return await promise;
 }
