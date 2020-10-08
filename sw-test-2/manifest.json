@@ -1,0 +1,16 @@
+{
+  "name": "Gunn Bell App",
+  "short_name": "Bell",
+  "start_url": ".",
+  "icons": [
+    {
+      "src": "bell-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "description": "Makes the bell ring, even during distance learning!"
+}
