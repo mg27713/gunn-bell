@@ -74,7 +74,7 @@ addEventListener("fetch", function(event) {
 						.open(cachePrefix + version)
 						.then(function(cache) {
 							cache.put(event.request, newResponse);
-							return response;
+							return newResponse;
 						});
 				});
 			})
