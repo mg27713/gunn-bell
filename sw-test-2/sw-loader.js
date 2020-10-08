@@ -16,7 +16,7 @@ if ("serviceWorker" in navigator) {
 			}
 		})
 		.catch(e => {
-			if (!(e instanceof TypeError)) // TypeError happens on the first load beecause the service worker hasn't replaced the macros in versions.js
+			if (!(e instanceof ReferenceError)) // ReferenceError happens on the first load beecause the service worker hasn't replaced the macros in versions.js
 				// but if the service worker is first being installed, then it must be up to date.
 				throw e;
 		});
