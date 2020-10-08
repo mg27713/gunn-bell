@@ -76,6 +76,8 @@ addEventListener("fetch", function(event) {
 						.open(cachePrefix + version)
 						.then(function(cache) {
 							cache.put(event.request, backupResponse);
+							
+							debugOutput("loading " + req.url);
 							return backupResponse;
 						});
 				});
@@ -91,4 +93,10 @@ function buildNewResponse(content) {
 	});
 	
 	return new Response(stream, {"Content-Type":"text/javascript"});
+}
+
+function debugOutput(msg) {
+	clients
+		.matchAll()
+		.then(c => c.forEach(client => client.postMessage({swDebug:msg})));
 }

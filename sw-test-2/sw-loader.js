@@ -1,3 +1,10 @@
+addEventListener("message", msg => {
+	if (!(msg["swDebug"]))
+		return;
+	
+	console.log(msg["swDebug"]);
+});
+
 if ("serviceWorker" in navigator) {
 	navigator.serviceWorker.register("./sw.js");
 	
