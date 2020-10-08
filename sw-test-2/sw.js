@@ -36,6 +36,8 @@ addEventListener("fetch", function(event) {
 				return res
 				|| fetch(event.request)
 				.then(async function(response) {
+					const backupResponse = response.clone();
+					
 					const reader = response.body.getReader();
 					
 					var resolve;
@@ -73,8 +75,8 @@ addEventListener("fetch", function(event) {
 					: caches
 						.open(cachePrefix + version)
 						.then(function(cache) {
-							cache.put(event.request, newResponse);
-							return newResponse;
+							cache.put(event.request, backupResponse);
+							return backupResponse;
 						});
 				});
 			})
