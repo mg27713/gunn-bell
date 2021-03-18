@@ -1,4 +1,5 @@
 //const schedules = require("./schedules.json");
+var playing;
 
 function secondLoop() {
 	let date = new Date().toString().split(" ");
