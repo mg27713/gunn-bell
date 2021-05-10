@@ -8,7 +8,7 @@ window.addEventListener("load", function() {
 	if (localStorage.settingVolume)
 		volume.value = localStorage.settingVolume;
 	
-	audio.volume = parseInt(volume.value/100);
+	audio.volume = parseInt(volume.value)/100;
 	testAudio.volume = audio.volume;
 	volumeField.innerHTML = volume.value;
 	
