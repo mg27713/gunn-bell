@@ -1,5 +1,4 @@
-//const schedules = require("./schedules.json");
-var playing;
+// const schedules = require("./schedules.json");
 
 function secondLoop() {
 	let date = new Date().toString().split(" ");
@@ -34,4 +33,8 @@ function secondLoop() {
 
 window.addEventListener("load", () => {
   setInterval(secondLoop, 1000);
+	
+	document.getElementById("test-button").addEventListener("click", () => {
+		document.getElementById("test-sound").play();
+	});
 });
