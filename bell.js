@@ -33,4 +33,8 @@ function secondLoop() {
 
 window.addEventListener("load", () => {
   setInterval(secondLoop, 1000);
+	
+	document.getElementById("test-button").addEventListener("click", () => {
+		document.getElementById("test-sound").play();
+	});
 });
