@@ -5,6 +5,8 @@ window.addEventListener("load", function() {
 	const volume = document.getElementById("volume-slider");
 	const volumeField = document.getElementById("volume-display");
 	
+	document.getElementById("school").innerText = school;
+	
 	if (localStorage.settingVolume)
 		volume.value = localStorage.settingVolume;
 	
