@@ -1,4 +1,4 @@
-const school = location.href.contains("jls") ? "JLS" : "Gunn";
+const school = location.href.includes("jls") ? "JLS" : "Gunn";
 const schedules = school == "Gunn" ? {
 	"Mon": [
 		"8:52",
