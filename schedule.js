@@ -160,7 +160,7 @@ const schedules = school == "Gunn" ? {
 		"14:30"
 	],
 	
-	"Wed": [
+	"Fri": [
 		"8:25",
 		"8:30",
 		"10:00",
